@@ -19,6 +19,8 @@
 | 07 | [Roadmap](docs/07-roadmap.md) | Fases de entrega e critérios de aceite |
 | 08 | [Dúvidas para o cliente](docs/08-duvidas.md) | Perguntas que precisam de resposta antes do desenvolvimento |
 | 09 | [Riscos, premissas e o que não prometer](docs/09-riscos-e-premissas.md) | Limites reais do projeto para uma proposta honesta |
+| 10 | [Dores do e-commerce multicanal](docs/10-dores-ecommerce.md) | Pesquisa das dores, evidências e como o projeto ajuda (base para vender) |
+| 11 | [Roteiro da apresentação](docs/11-roteiro-apresentacao.md) | Esboço slide a slide para a reunião com o cliente |
 
 ## Resumo em uma linha por marketplace
 

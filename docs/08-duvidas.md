@@ -18,6 +18,9 @@ Respostas a estas perguntas definem escopo, prioridade e preço.
 9. **Qual sistema é a fonte da verdade do estoque?** Magazord, ERP ou o novo sistema? (decisão mais importante da arquitetura)
 10. Os pedidos dos marketplaces entram na Magazord hoje? Como o estoque é baixado?
 11. Existe planilha mestre de produtos? Podem compartilhar uma amostra?
+11a. A loja anuncia no Google Shopping ou tem catálogo no Instagram/Meta? (Se sim, já existe um **feed XML** que podemos ler.)
+11b. É possível exportar uma planilha de produtos com estoque pelo painel da Magazord? Com que frequência?
+11c. O lojista já pediu formalmente o acesso à API da Magazord? Qual foi a resposta?
 12. Qual o plano para o projeto Magento: substituir a Magazord, rodar em paralelo, ou outra marca?
 
 ## Cadastro e regras

@@ -152,6 +152,21 @@ Fontes: [UpSeller — integrar Americanas](https://upseller.com/pt/help-doc-arti
 - Credenciais (URL, token e senha) **não são autoatendidas**: solicitadas ao suporte/integração da Magazord.
 - Existe SDK PHP oficial para o **marketplace** da Magazord (`magazord-plataforma/marketplace-sdk`) e um repositório público de diretrizes de API.
 - Papel no sistema: canal de venda **e/ou** fonte inicial do catálogo (importar produtos já cadastrados no site para não começar do zero). **Decidir com o cliente** qual sistema é a fonte da verdade do estoque (ver [08-duvidas.md](08-duvidas.md)).
+- **Relato do cliente:** a Magazord costuma resistir a liberar acesso à API. Por isso o sistema não deve **depender** dela. Ver o plano B abaixo.
+
+### Plano B: referência de dados sem a API da Magazord
+
+Os dados são do lojista, e o site é dele. As fontes abaixo podem ser combinadas, em ordem de preferência:
+
+| # | Fonte | O que entrega | Limitações |
+|---|---|---|---|
+| 1 | **API oficial** (pedido formal do lojista à Magazord) | Tudo: produtos, SKUs, estoque, preço, pedidos | Depende da Magazord liberar |
+| 2 | **Feed de produtos XML** (Google Merchant Center / catálogo Meta), se a loja já anuncia no Google Shopping ou Instagram | SKU/ID, título, preço, preço promocional, disponibilidade, imagens, link, às vezes GTIN | Normalmente **não traz quantidade** de estoque, só "em estoque/esgotado". Validar se a Magazord gera e com que frequência atualiza |
+| 3 | **Exportação de planilha** pelo painel (manual ou agendada) | Normalmente inclui quantidade de estoque | Processo manual ou semiautomático (upload ou e-mail) |
+| 4 | **Leitura do site público** (sitemap.xml + dados estruturados schema.org `Product`/`Offer` em JSON-LD nas páginas de produto) | Lista de produtos, preço, disponibilidade, variações (depende do tema) | Sem quantidade de estoque e sem pedidos; quebra se o tema mudar; precisa de rotina "educada" (baixa frequência, fora do horário de pico) para não ser bloqueada pelo firewall da loja; conferir se o contrato com a Magazord restringe acesso automatizado |
+| 5 | **ERP** do cliente, se existir (Bling, Tiny etc. têm API aberta) | Estoque e pedidos com confiabilidade | Só se o ERP for usado como controle de estoque |
+
+**Recomendação:** para o monitoramento (Fase 2), usar a **leitura do site público ou o feed** para catálogo, preço e disponibilidade, e a **planilha ou o ERP** para quantidade de estoque. Ao mesmo tempo, o lojista pede formalmente o acesso à API. Essa dependência também reforça o valor do **cadastro único** (Fase 3): com ele, a fonte da verdade passa a ser o nosso sistema, e a Magazord vira só mais um canal.
 
 Fontes: [Documentação API Magazord](https://docs-v1.api.magazord.com.br/) · [Changelog](https://docs.api.magazord.com.br/changelog/) · [api-guidelines](https://github.com/magazord-plataforma/api-guidelines) · [marketplace-sdk](https://packagist.org/packages/magazord-plataforma/marketplace-sdk) · [Guia de integração (Adstart)](https://intercom.help/adstart-ajuda/pt-BR/articles/11029698-magazord)
 
