@@ -30,7 +30,8 @@ Fontes: [Mercado & Consumo: projeção 2026](https://mercadoeconsumo.com.br/16/0
 | 10 | Conciliação financeira dos repasses | Médio-alto | 🔵 Sugestão futura (ou integrar ferramenta) | Futuro |
 | 11 | Dependência de plataforma (Magazord, um canal só) | Estratégico | ✅ Cadastro único como fonte da verdade | 3 |
 | 12 | Sazonalidade e datas comerciais sem planejamento | Médio | ✅ Agenda + recorrências | 1 |
-| 13 | Ruptura de grade (falta tamanho M da estampa mais vendida) | Alto em moda | 🟡 Relatórios | 4 |
+| 13 | Ruptura de grade (falta tamanho M da estampa mais vendida) | Alto em moda | 🟡 Relatórios + avise-me da Magazord | 4 |
+| 14 | Frete cobrado pela transportadora (CT-e) diferente do contratado | Alto (financeiro direto) | ✅ Resolve — ver [13-auditoria-frete.md](13-auditoria-frete.md) | 2B |
 
 Legenda: ✅ resolve no escopo · 🟡 ajuda parcialmente ou em fase posterior · 🔵 oportunidade de módulo futuro.
 

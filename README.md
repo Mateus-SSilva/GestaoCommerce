@@ -21,6 +21,8 @@
 | 09 | [Riscos, premissas e o que não prometer](docs/09-riscos-e-premissas.md) | Limites reais do projeto para uma proposta honesta |
 | 10 | [Dores do e-commerce multicanal](docs/10-dores-ecommerce.md) | Pesquisa das dores, evidências e como o projeto ajuda (base para vender) |
 | 11 | [Roteiro da apresentação](docs/11-roteiro-apresentacao.md) | Esboço slide a slide para a reunião com o cliente |
+| 12 | [API da Magazord](docs/12-api-magazord.md) | Tudo que a API oferece e como cada módulo é usado no projeto |
+| 13 | [Auditoria de frete](docs/13-auditoria-frete.md) | Conferência automática pedido × CT-e com margem de erro |
 
 ## Resumo em uma linha por marketplace
 

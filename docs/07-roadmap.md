@@ -70,6 +70,17 @@
 
 **Critério de aceite:** a conferência manual diária dos canais da fase é substituída pelo agente; problemas viram tarefas com responsável sem intervenção.
 
+## Fase 2B — Auditoria de frete (em paralelo à Fase 2)
+
+Módulo independente dos marketplaces, com retorno financeiro direto. Detalhes em [13-auditoria-frete.md](13-auditoria-frete.md).
+
+- Captura dos CT-es via SEFAZ (Distribuição DF-e, com certificado A1) e/ou XML por e-mail.
+- Casamento **pedido ↔ NF-e ↔ CT-e** pela chave da NF-e (dados da Magazord).
+- Cadastro das tabelas de frete por transportadora, com vigência.
+- Comparação com margem de erro configurável (% e/ou R$); verificações de peso cubado, componentes, duplicidade, CT-e sem pedido.
+- Divergência → tarefa no Kanban (mesmo motor do agente); relatório de contestação por transportadora.
+- **Critério de aceite:** 100% dos CT-es do mês conferidos automaticamente; divergências com tarefa e relatório de contestação.
+
 ## Fase 3 — Cadastro único
 
 - Catálogo central completo (variações cor × tamanho, mídias, tabela de medidas, atributos de moda), partindo do catálogo espelho.

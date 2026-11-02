@@ -67,6 +67,13 @@ Três pilares, na ordem em que serão entregues:
 - Tabela de medidas padronizada em todos os canais (menos troca por tamanho)
 - Seus dados deixam de depender de uma plataforma: o sistema vira a fonte da verdade
 
+### Slide 9B — Auditoria de frete
+- Todo CT-e da transportadora é conferido automaticamente com o pedido e a tabela contratada
+- Margem de erro definida por vocês (% ou R$)
+- Peso cubado inflado, taxa não contratada, cobrança em dobro, CT-e sem pedido
+- Divergência vira tarefa e relatório de contestação para a transportadora
+- *Preencher ao vivo:* envios/mês × divergência média = dinheiro recuperável
+
 ### Slide 10 — Canais: o que é possível hoje (transparência)
 | Agora | Em seguida | Em validação |
 |---|---|---|
