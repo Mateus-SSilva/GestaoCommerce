@@ -53,11 +53,11 @@ Ver a lista completa em [09-riscos-e-premissas.md](09-riscos-e-premissas.md).
 
 | Fase | Entrega | Valor para o cliente |
 |---|---|---|
-| 0 | Descoberta e validação de acessos às APIs | Confirma o que é possível antes de investir |
-| 1 | Gestão da equipe (Kanban, recorrências, agenda) + base do sistema | Resolve a desorganização interna imediatamente, sem depender de MPs |
-| 2 | Catálogo central + conectores Magazord, Mercado Livre e Shopee | Cadastro único e estoque sincronizado nos canais principais |
-| 3 | Auditoria diária + problemas virando tarefas | Fim da conferência manual |
-| 4 | Novos conectores (Amazon, Magalu, SHEIN, TikTok Shop…) | Expansão de canais |
+| 0 | Descoberta e abertura dos acessos às APIs (em paralelo) | Confirma o que é possível antes de investir |
+| 1 | **Sistema interno de gestão completo** (Kanban, recorrências, agenda, painel do gestor) | Resolve a desorganização interna imediatamente, sem depender de MPs |
+| 2 | **Agente de monitoramento** (somente leitura) em ML, Shopee e Magazord — problemas viram tarefas para o responsável | Fim da conferência manual, sem risco de alterar anúncios |
+| 3 | **Cadastro único** (catálogo central, publicação e estoque sincronizado) | Centraliza tudo em um único lugar |
+| 4 | Novos canais (SHEIN, TikTok Shop, Americanas…), primeiro no monitoramento, depois no cadastro | Expansão de canais |
 | 5 | SaaS multi-cliente (planos, cobrança, onboarding) e integração Magento | Produto vendável para outras lojas |
 
 Detalhes em [07-roadmap.md](07-roadmap.md).
