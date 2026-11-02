@@ -1,0 +1,13 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@source '../../../../app/Filament/**/*';
+@source '../../../../resources/views/filament/**/*';
+@source '../../../../resources/views/components/**/*';
+
+.kanban-ghost {
+    @apply opacity-40 ring-2 ring-primary-400;
+}
+
+.kanban-drag {
+    @apply rotate-2 shadow-xl;
+}

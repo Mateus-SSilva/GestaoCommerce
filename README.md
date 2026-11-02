@@ -2,7 +2,7 @@
 
 > Plataforma de gestão para operações de e-commerce multicanal: **catálogo único, publicação em vários marketplaces, auditoria diária dos anúncios e gestão da equipe (Kanban, tarefas recorrentes e agenda)**.
 
-**Status:** fase de proposta/documentação. Nenhum código foi desenvolvido ainda.
+**Status:** proposta documentada + **POC do sistema de gestão da equipe** em [`poc/`](poc/README.md) (Kanban, recorrências, agenda, painel do gestor e agente de monitoramento simulado).
 **Cliente de referência:** e-commerce de pijamas (loja principal na Magazord + Shopee, Mercado Livre, SHEIN e outros).
 **Objetivo de produto:** SaaS multi-cliente, em que cada empresa conecta apenas os marketplaces que usa.
 
