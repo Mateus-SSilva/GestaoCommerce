@@ -15,10 +15,20 @@ Prova de conceito do **sistema interno de gestão** (Fase 1 do [roadmap](../docs
 | **Recorrências** | Regras diária / semanal / mensal que criam a tarefa automaticamente, com responsável, prazo e checklist |
 | **Agente de monitoramento** | **Simulação:** encontra problemas fictícios nos canais (anúncio pausado, banido, estoque divergente…), cria a tarefa para o responsável, não duplica e move para "Validar" quando o problema some |
 | **Configurações** | Quadros e colunas, equipe, etiquetas, datas e eventos |
+| **Tema claro/escuro** | Botão no topo (e na tela de login); a escolha fica salva no navegador |
 
 Login de demonstração (já vem preenchido): **gestor@demo.test / demo1234**. Os outros usuários (ana, bruno, carla, diego @demo.test) usam a mesma senha.
 
-## Como rodar
+## Acessar pelo navegador sem instalar nada (GitHub Codespaces)
+
+1. No GitHub, abra o repositório e escolha a branch da POC.
+2. Clique em **Code → Codespaces → Create codespace on …**.
+3. Aguarde a primeira preparação (alguns minutos: instala dependências e cria os dados de demonstração). A demo abre sozinha numa URL do tipo `https://<nome>-8000.app.github.dev`.
+4. **Para compartilhar com o cliente:** na aba **Ports**, clique com o botão direito na porta 8000 → **Port Visibility → Public**. Sem isso, só quem tem acesso ao repositório consegue abrir.
+
+O Codespace hiberna após um tempo sem uso; ao reabrir, o servidor sobe de novo. Para recriar os dados de demonstração: `cd poc && composer demo:reset`.
+
+## Como rodar localmente
 
 Requisitos: PHP 8.3+ (extensões `pdo_sqlite`, `intl`, `mbstring`, `zip`), Composer 2 e Node 20+.
 

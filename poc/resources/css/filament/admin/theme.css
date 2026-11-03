@@ -3,6 +3,7 @@
 @source '../../../../app/Filament/**/*';
 @source '../../../../resources/views/filament/**/*';
 @source '../../../../resources/views/components/**/*';
+@source '../../../../app/Providers/**/*';
 
 .kanban-ghost {
     @apply opacity-40 ring-2 ring-primary-400;

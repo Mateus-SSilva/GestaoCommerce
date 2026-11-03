@@ -1,0 +1,16 @@
+{
+    "name": "GestãoCommerce POC",
+    "image": "mcr.microsoft.com/devcontainers/php:1-8.3-bookworm",
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": { "version": "22" }
+    },
+    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y libicu-dev libzip-dev libsqlite3-dev && sudo docker-php-ext-install intl zip pdo_sqlite && cd poc && composer demo",
+    "postStartCommand": "cd poc && nohup php artisan serve --host=0.0.0.0 --port=8000 > /tmp/poc-server.log 2>&1 &",
+    "forwardPorts": [8000],
+    "portsAttributes": {
+        "8000": { "label": "GestãoCommerce (demo)", "onAutoForward": "openBrowser" }
+    },
+    "customizations": {
+        "codespaces": { "openFiles": ["poc/README.md"] }
+    }
+}
