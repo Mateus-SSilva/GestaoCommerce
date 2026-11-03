@@ -88,6 +88,16 @@ class Card extends Model
         return $this->hasOne(MonitorIssue::class);
     }
 
+    /** Ordem de urgência: prioridade (urgente → baixa), depois prazo mais próximo (sem prazo por último). */
+    public function scopeOrderByUrgency(Builder $query): Builder
+    {
+        return $query
+            ->orderByRaw("case priority when 'urgente' then 0 when 'alta' then 1 when 'media' then 2 when 'baixa' then 3 else 4 end")
+            ->orderByRaw('case when due_date is null then 1 else 0 end')
+            ->orderBy('due_date')
+            ->orderBy('position');
+    }
+
     public function scopeOpen(Builder $query): Builder
     {
         return $query->whereNull('completed_at');

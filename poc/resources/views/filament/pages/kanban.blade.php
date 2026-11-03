@@ -37,7 +37,7 @@
                 @endforeach
             </x-filament::input.select>
         </x-filament::input.wrapper>
-        <span class="text-xs text-gray-500 dark:text-gray-400">Arraste os cartões entre as colunas · clique para abrir</span>
+        <span class="text-xs text-gray-500 dark:text-gray-400">Ordenados por prioridade e prazo · arraste entre colunas · clique para abrir</span>
     </div>
 
     {{-- Colunas --}}

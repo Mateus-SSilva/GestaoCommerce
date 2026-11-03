@@ -12,6 +12,7 @@ window.kanbanInit = (el, $wire) => {
     el._sortable = Sortable.create(el, {
         group: 'kanban-cards',
         animation: 150,
+        sort: false, // a ordem dentro da coluna é automática (prioridade e prazo)
         draggable: '[data-card-id]',
         ghostClass: 'kanban-ghost',
         dragClass: 'kanban-drag',

@@ -115,7 +115,8 @@ class Kanban extends Page
                 ->when(is_numeric($this->responsavel), fn ($q) => $q->where('assignee_id', (int) $this->responsavel))
                 ->when($this->prioridade, fn ($q) => $q->where('priority', $this->prioridade))
                 ->when(filled($this->busca), fn ($q) => $q->where('title', 'like', '%'.$this->busca.'%'))
-                ->orderBy('position');
+                ->reorder()
+                ->orderByUrgency();
         }])->get() ?? collect();
 
         return [

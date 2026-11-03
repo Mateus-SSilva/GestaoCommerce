@@ -120,6 +120,31 @@ class GestaoTest extends TestCase
         $this->assertNull($card->fresh()->completed_at);
     }
 
+    public function test_kanban_lists_cards_by_priority_then_due_date(): void
+    {
+        $this->actingAs(User::first());
+        $board = Board::where('name', 'Marketplaces')->first();
+        $column = $board->columns()->where('name', 'Backlog')->first();
+        $column->cards()->delete();
+
+        $make = fn ($title, $priority, $due, $position) => Card::create([
+            'board_id' => $board->id, 'board_column_id' => $column->id, 'title' => $title,
+            'priority' => $priority, 'due_date' => $due, 'position' => $position,
+        ]);
+        $make('baixa', 'baixa', '2026-11-01', 0);
+        $make('media sem prazo', 'media', null, 1);
+        $make('media com prazo', 'media', '2026-11-20', 2);
+        $make('urgente', 'urgente', '2026-12-01', 3);
+        $make('alta', 'alta', null, 4);
+
+        $columns = Livewire::test(Kanban::class, ['board' => $board->id])->viewData('columns');
+
+        $this->assertSame(
+            ['urgente', 'alta', 'media com prazo', 'media sem prazo', 'baixa'],
+            $columns->firstWhere('id', $column->id)->cards->pluck('title')->all(),
+        );
+    }
+
     public function test_cannot_move_card_to_a_column_of_another_board(): void
     {
         $this->actingAs(User::first());
